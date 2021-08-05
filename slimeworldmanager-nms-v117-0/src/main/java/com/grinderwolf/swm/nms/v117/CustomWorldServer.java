@@ -271,13 +271,13 @@ public class CustomWorldServer extends WorldServer {
             List<CompoundTag> entities = chunk.getEntities();
             loadedEntities = 0;
 
-            if (entities != null) {
-                this.G.a(EntityTypes.a(entities
-                                .stream()
-                                .map((tag) -> (NBTTagCompound) Converter.convertTag(tag))
-                                .collect(Collectors.toList()),
-                        this));
-            }
+//            if (entities != null) {
+//                this.G.a(EntityTypes.a(entities
+//                                .stream()
+//                                .map((tag) -> (NBTTagCompound) Converter.convertTag(tag))
+//                                .collect(Collectors.toList()),
+//                        this));
+//            }
         };
 
         CompoundTag upgradeDataTag = ((CraftSlimeChunk) chunk).getUpgradeData();

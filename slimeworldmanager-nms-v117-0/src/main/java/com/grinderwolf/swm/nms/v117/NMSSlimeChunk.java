@@ -123,23 +123,23 @@ public class NMSSlimeChunk implements SlimeChunk {
     public List<CompoundTag> getEntities() {
         List<CompoundTag> entities = new ArrayList<>();
 
-        PersistentEntitySectionManager<Entity> entityManager = chunk.i.G;
-        Iterator<Entity> entitySlices = entityManager.d().a().iterator();
-
-        while(entitySlices.hasNext()) {
-            Entity entity = entitySlices.next();
-
-            ChunkCoordIntPair chunkPos = chunk.getPos();
-            ChunkCoordIntPair entityPos = entity.cU();
-
-            if(chunkPos.b == entityPos.b && chunkPos.c == entityPos.c) {
-                NBTTagCompound entityNbt = new NBTTagCompound();
-                if(entity.d(entityNbt)) {
-                    chunk.b(true);
-                    entities.add((CompoundTag) Converter.convertTag("", entityNbt));
-                }
-            }
-        }
+//        PersistentEntitySectionManager<Entity> entityManager = chunk.i.G;
+//        Iterator<Entity> entitySlices = entityManager.d().a().iterator();
+//
+//        while(entitySlices.hasNext()) {
+//            Entity entity = entitySlices.next();
+//
+//            ChunkCoordIntPair chunkPos = chunk.getPos();
+//            ChunkCoordIntPair entityPos = entity.cU();
+//
+//            if(chunkPos.b == entityPos.b && chunkPos.c == entityPos.c) {
+//                NBTTagCompound entityNbt = new NBTTagCompound();
+//                if(entity.d(entityNbt)) {
+//                    chunk.b(true);
+//                    entities.add((CompoundTag) Converter.convertTag("", entityNbt));
+//                }
+//            }
+//        }
         return entities;
     }
 }
